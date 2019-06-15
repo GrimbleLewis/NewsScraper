@@ -1,0 +1,33 @@
+{
+  "name": "News-Scraper",
+  "version": "1.0.0",
+  "description": "An application that scrapes a website for articles and allows a user to leave comments on them",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "init": "^0.1.2",
+    "logger": "^0.0.1",
+    "mongoose": "^5.6.0",
+    "morgan": "^1.9.1",
+    "y": "^0.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrimbleLewis/News-Scraper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrimbleLewis/News-Scraper/issues"
+  },
+  "homepage": "https://github.com/GrimbleLewis/News-Scraper#readme"
+}
