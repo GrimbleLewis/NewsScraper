@@ -5,8 +5,7 @@ var mongoose = require("mongoose");
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method
 // It works on the client and on the server
-var axios = require("axios");
-var cheerio = require("cheerio");
+
 
 
 var PORT = 8080;
@@ -33,12 +32,13 @@ app.set("view engine", "handlebars");
 
 //Routes
 require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
 
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscrape";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-// Connect to the Mongo DB
+
 
 
 // Start the server
