@@ -29,8 +29,8 @@ $(document).ready(function() {
 
 
 
-    
-$(document).on('click', '.save-article', function (e) {
+// changes the saved value of the article to true and sends to article to the saved.handlebars    
+$(document).on('click', '.save-article', function () {
   var articleId = $(this).data('id');
   $.ajax({
     url: '/save/'+ articleId,
@@ -40,6 +40,22 @@ $(document).on('click', '.save-article', function (e) {
     },
     error: function (error) {
       res.json(error);
+    }
+  });
+});
+
+// deletes selected article from the saved article page
+$(document).on('click', '.delete-article', function (e){
+  e.preventDefault();
+  var id = $(this).data('id');
+  $.ajax({
+    url: '/deletearticle/'+id,
+    type: 'GET',
+    success: function (response) {
+      window.location.href = '/saved';
+    },
+    error: function (error) {
+      showErrorModal(error);
     }
   });
 });
