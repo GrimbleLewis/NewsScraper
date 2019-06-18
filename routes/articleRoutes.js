@@ -58,7 +58,7 @@ module.exports = function(app) {
 
 
   // changes the saved value of the article to true and sends to article to the saved.handlebars
-  app.get('/save/:id', (req,res) => {
+  app.get('/article/save/:id', (req,res) => {
     db.Article
       .update({_id: req.params.id},{saved: true})
       .then(result => res.redirect(result))

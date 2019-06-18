@@ -46,6 +46,10 @@
       <p>Your Saved Articles</p>
     </div>
   </div>
+
+  <div id="notes"></div>
+
+
   <div class="container-fluid article-container">
     <div class="articles">
       {{#each articles}}
@@ -61,29 +65,13 @@
           <button class="btn btn-primary add-note" data-id="{{_id}}">Add Note</button>
           <button class="btn delete-article" data-id="{{_id}}">Delete Article</button>
         </div>
-
+    
       </div>
 
       {{/if}}
       {{/each}}
 
-      <div id="note-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-md">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title text-center">Add a note</h4>
-            </div>
-            <div class="modal-body">
-              <input type="text" id="note-body-entry" class="note-input" placeholder="Enter Body">
-              <div id="note-area"></div>
-            </div>
-            <div class="modal-footer">
-              <h5 class="instructions">Click the note to read it, or X to delete</h5>
-              <button type="button" id="submit-note">Save Note</button>
-            </div>
-          </div>
-        </div>
+   
       </div>
     </div>
     <div class="card">

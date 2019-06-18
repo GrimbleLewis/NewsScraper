@@ -32,12 +32,13 @@ app.set("view engine", "handlebars");
 
 //Routes
 require("./routes/htmlRoutes")(app);
-require("./routes/apiRoutes")(app);
+require("./routes/articleRoutes")(app);
+require("./routes/noteRoutes")(app);
 
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscrape";
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 
 
