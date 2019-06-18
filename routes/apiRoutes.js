@@ -22,10 +22,9 @@ module.exports = function(app) {
 
         console.log(result);
         db.Article.create(result)
-          .then(function(Article) {
-            // View the added result in the console
-            console.log(Article);
-          })
+        .then(result => res.redirect('/'))
+
+    
           .catch(function(err) {
             console.log(err);
           });
@@ -38,7 +37,7 @@ module.exports = function(app) {
     // Grab every document in the Articles collection
     db.Article.find({})
       .exec()
-      .then(function(Article) {
+      .then(Article => {
         // If we were able to successfully find Articles, send them back to the client
         res.json({ Article });
       })
@@ -53,6 +52,13 @@ module.exports = function(app) {
     db.Article.find({})
       .remove()
       .then(result => res.json(result))
+      .catch(err => res.json(err));
+  });
+
+  app.get('/save/:id', (req,res) => {
+    db.Article
+      .update({_id: req.params.id},{saved: true})
+      .then(result => res.redirect('/saved'))
       .catch(err => res.json(err));
   });
 };

@@ -52,6 +52,7 @@
 
     <div class="articles">
       {{#each articles}}
+      {{#unless saved}}
       <div class="card">
         <div class="card-header">
           <h3>{{this.title}}</h3>
@@ -60,10 +61,12 @@
           <h5 class="card-title">Article Summary</h5>
           <p class="card-text">{{this.summary}}</p>
           <a href="{{this.link}}" target="_blank" class="btn btn-primary">Link To Article</a>
+          <button class="btn save-article" data-id="{{_id}}">Save Article</button>
         </div>
+
       </div>
 
-
+      {{/unless}}
       {{/each}}
     </div>
     <div class="card">
@@ -90,7 +93,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
-  <script src="/assets/js/index.js"></script>
+  
 
 
 

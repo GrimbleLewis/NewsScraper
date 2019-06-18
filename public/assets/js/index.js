@@ -26,4 +26,22 @@ $(document).ready(function() {
 
       });
     }
+
+
+
+    
+$(document).on('click', '.save-article', function (e) {
+  var articleId = $(this).data('id');
+  $.ajax({
+    url: '/save/'+ articleId,
+    type: 'GET',
+    success: function (response) {
+      window.location.href = '/';
+    },
+    error: function (error) {
+      res.json(error);
+    }
   });
+});
+
+});
