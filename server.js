@@ -37,7 +37,7 @@ require("./routes/apiRoutes")(app);
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscrape";
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 
 
