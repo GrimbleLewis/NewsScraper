@@ -8,7 +8,7 @@ var mongoose = require("mongoose");
 
 
 
-var PORT = 8080;
+var PORT = process.env.PORT || 8080;
 
 // Initialize Express
 var app = express();
