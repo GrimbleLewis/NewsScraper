@@ -65,10 +65,12 @@ module.exports = function(app) {
       .catch(err => res.json(err));
   });
 
+  // changed the saved value of the article to false, sending it back to the index.handlebars
   app.get('/deletearticle/:id', (req,res) =>{
     db.Article
     .update({_id: req.params.id},{saved: false})
       .then(result => res.json(result))
       .catch(err => res.json(err));
   });
+
 };

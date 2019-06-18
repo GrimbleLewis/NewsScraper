@@ -15,4 +15,4 @@ npm i mongoose
 
 
 
-Currently the scraper is only able to grab the first 20 articles of the website and have the ability to clear the articles.
+Currently the scraper is only able to grab the first 20 articles of the website and have the ability save articles and then delete the saved articles from your saved page.
