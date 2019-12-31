@@ -14,13 +14,13 @@ or install locally:
 
 How to install:
 
-npm i
-npm i axios
-npm i cheerio
-npm i express
-npm i express-handlebars
-npm i morgan
-npm i mongoose
+npm i  
+npm i axios  
+npm i cheerio  
+npm i express  
+npm i express-handlebars  
+npm i morgan  
+npm i mongoose  
 
 
 
